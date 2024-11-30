@@ -9,8 +9,8 @@ const links = document.querySelectorAll('.menu__link');
 // картинки и названия выбранных категорий товара
 const imgs = document.querySelectorAll('.img');
 const titles = document.querySelectorAll('.title');
-// слушатель для бургера
 
+// слушатель для бургера
 burgerOpen.addEventListener('click', () => {
     burger.classList.add('burger_open');
     burgerOpen.classList.add('menu__burger_hidden');
@@ -19,6 +19,7 @@ burgerClose.addEventListener('click', () => {
     burger.classList.remove('burger_open');
     burgerOpen.classList.remove('menu__burger_hidden');
 });
+
 // запрос к серверу по клику
 links.forEach((link) => {
     link.addEventListener('click', () => {
@@ -44,7 +45,7 @@ links.forEach((link) => {
                 });
             }
             burger.classList.remove('burger_open');
-            burgerOpen.classList.remove('menu__burger_hidden');
+            burgerOpen.classList.add('menu__burger_hidden');
         })
         .catch(err => console.log(err));
 
@@ -53,6 +54,7 @@ links.forEach((link) => {
 
 // включает темный режим
 onclick="document.body.classList.toggle('dark-mode')";
+
 // выпадающее меню категории
 function toggleDropdown(menuId) {
     const dropdownMenu = document
