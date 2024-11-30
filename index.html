@@ -11,13 +11,13 @@
 </head>
 <body class="dark-mode ">
     <section class="main max-w-4xl mx-auto p-6 relative">
-        <div class="relative h-screen ">
+        <div class="relative h-screen pt-6">
             <button class="border p-1 absolute top-0 right-0 text-dark-mode-white" 
                     onclick="document.body.classList.toggle('dark-mode')">
                 Switch theme
             </button>
-            <p class="pb-2 text-gray-700">Все товары</p>
-            <div class="cards grid grid-cols-2   gap-4">
+            <a href="index.html" class="p-2 text-gray-600">Все товары</a>
+            <div class="cards grid grid-cols-2 mt-4  gap-4">
                 <a href="card.html">
                     <div class="p-2 sm:p-6 bg-gray-200 border border-gray-200 rounded shadow-md dark:bg-gray-800 dark:border-gray-700 h-full">
                         <img src="./img/img-1.png" alt="tovar" class="w-full img" >
@@ -42,12 +42,12 @@
                 <a href="card.html">
                     <div class=" p-2 sm:p-6 bg-gray-200 border border-gray-200 rounded shadow-md dark:bg-gray-800 dark:border-gray-700 h-full">
                         <img src="./img/img-4.png" alt="tovar" class="w-full img">
-                        <h5 class=" title m-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Fiio</h5>
+                        <h5 class="title m-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Fiio</h5>
                         <p class="mb-3 font-normal text-gray-500 dark:text-gray-400 text-center">33000,0 P</p>
                     </div>
                 </a>
             </div>
-            <div class="menu__burger bg-teal-500 absolute  right-0 border-teal-500 border-2 w-20 h-20 md:w-24 md:h-24 grid place-items-center">
+            <div class="menu__burger bg-teal-500 fixed  border-teal-500 border-2 w-20 h-20 md:w-24 md:h-24 grid place-items-center">
                 <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M36 14L8 14V11L36 11V14Z" fill="white"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M36 24L8 24V21L36 21V24Z" fill="white"/>
@@ -62,13 +62,13 @@
         <div class="burger__container w-3/4 h-full">
             <div class="relative bg-teal-500  p-6 ">
                 <div class=" text-white mb-4 flex items-center justify-between gap-4">
-                     <!-- hover: opacity-5 -->
                     <button class=" bg-teal-500  text-white  focus:outline-none"
                             onclick="toggleDropdown('dropdownMenuRight')">
                             <span  class="text-white text-xl font-semibold">Категории</span>
                     </button>
                     <div class="hidden origin-top-right  absolute bg-gray-600 p-6 left-0 top-12  animate-fadeIn w-full text-white"
-                            id="dropdownMenuRight">
+                        id="dropdownMenuRight">
+                        
                         <a href="#" class="menu__link  text-xl block px-4 py-2 text-sm  
                                             hover:bg-gray-400 text-white">
                             Кино
@@ -84,9 +84,6 @@
                             Продукты
                             </a>
                     </div>
-                <!-- </div> -->
-                <!-- <div class=" mb-4 flex items-center justify-between gap-4">
-                    <h5 class="text-white text-xl font-semibold">Категории</h5> -->
                 <button type="button" class="burger__button p-2 border-white border-2 rounded-full justify-self-end">
                     <svg width="12" height="12" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M20 18L12 10L20 2L18 0L10 8L2 0L0 2L8 10L0 18L2 20L10 12L18 20L20 18Z" fill="white"/>
@@ -105,24 +102,6 @@
                     </button>
                 </form>
             </div>
-            <!-- <div class="burger__items bg-gray-600 p-6">
-                <nav class="burger__menu menu">
-                    <ul class="menu__links menu__links_type_burger list-disc text-white p-6">
-                        <li class="mb-4">
-                            <button class="menu__link text-white text-xl">Кино</button>
-                        </li>
-                        <li class="mb-4">
-                            <button class="menu__link text-white text-xl" href="#">Продукты</button>
-                        </li>
-                        <li class="mb-4">
-                            <button class="menu__link text-white text-xl">Косметика</button>
-                        </li>
-                        <li class="mb-4">
-                            <button class="menu__link text-white text-xl">Бытовая химия</button>
-                        </li>
-                    </ul>
-                </nav>
-            </div> -->
         </div>
     <script src="./script.js"></script>
 </body>

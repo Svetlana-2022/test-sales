@@ -2,12 +2,15 @@
 const burgerOpen = document.querySelector('.menu__burger');
 const burger = document.querySelector('.burger');
 const burgerClose = burger.querySelector('.burger__button');
-// кнопка для запроса с сервера
+
+// кнопка для запроса с сервера, категория товара
 const links = document.querySelectorAll('.menu__link');
-// картинки и названия
+
+// картинки и названия выбранных категорий товара
 const imgs = document.querySelectorAll('.img');
 const titles = document.querySelectorAll('.title');
-// для бургера
+// слушатель для бургера
+
 burgerOpen.addEventListener('click', () => {
     burger.classList.add('burger_open');
     burgerOpen.classList.add('menu__burger_hidden');
@@ -32,7 +35,6 @@ links.forEach((link) => {
             const dataCard = JSON.parse(localStorage.getItem('newCards') || '[]');
             console.log(dataCard);
     
-            
             for (let i = 0; i < dataCard.length; i++) { 
                 imgs.forEach((img, i) => { 
                     img.src = `https://api.nomoreparties.co/${dataCard[i+1].image}`;
@@ -41,16 +43,17 @@ links.forEach((link) => {
                     title.textContent = dataCard[i+1].title;
                 });
             }
+            burger.classList.remove('burger_open');
+            burgerOpen.classList.remove('menu__burger_hidden');
         })
         .catch(err => console.log(err));
 
-        burger.classList.remove('burger_open');
-        burgerOpen.classList.remove('menu__burger_hidden');
     });
 })
+
 // включает темный режим
 onclick="document.body.classList.toggle('dark-mode')";
-
+// выпадающее меню категории
 function toggleDropdown(menuId) {
     const dropdownMenu = document
     .getElementById(menuId);
