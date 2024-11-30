@@ -1,0 +1,101 @@
+.menu__burger {
+    bottom: 6rem;
+    border-radius: 50%;
+    
+}
+.menu__burger_hidden {
+    display: none;
+}
+.burger {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.burger_open {
+    display: block;
+}
+.burger__container {
+    z-index: 4;
+}
+.origin-top-right {
+    top: 134px;
+}
+.menu__link {
+    color: #ffffff;
+}
+.btn-add {
+    height: calc(( 50% - 4px ) + 0.75rem );
+}
+@media screen and (max-width: 360px) {
+    .cards{
+        grid-template-columns: 1fr;
+    }
+}
+/* slider */
+.slider {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.slider__item {
+    background-color: aqua;
+    width: 100%;
+}
+.slider__item img {
+    position: relative;
+}
+
+.slick-own-btn {
+    position: absolute;
+    z-index: 999;
+    top: calc(50% - 15px);
+    width: 30px;
+    height: 30px;
+    background: #ffffff;
+    opacity: 0.3;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 200ms linear;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.slick-own-btn:hover {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+ 
+.slick-own-btn:active {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+ 
+.slick-prev {
+    left: 1.5rem;
+}
+ 
+.slick-next {
+    right: 1.5rem;
+}
+.dark-mode {
+    background-color: rgb(50, 50, 73);
+    color: white;
+}
+ /* Animation  */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.5s ease-out forwards;
+}

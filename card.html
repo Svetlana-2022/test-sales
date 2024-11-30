@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>ООО «ИТ Продажи»</title>
+</head>
+    <body class="bg-gray-800">
+        <!-- card open -->
+        <section class="max-w-4xl mx-auto">
+            <div class=" p-6 pb-0 bg-gray-200 border border-gray-200  shadow-md dark:bg-gray-800 dark:border-gray-700">
+                <div class=" mb-4 flex items-center justify-between gap-4">
+                    <h2 class="text-gray-600 text-2xl font-semibold">Информация о товаре</h2>
+                    <a href="index.html" type="button" class="close__button p-2 border-white border-2 rounded-full justify-self-end">
+                        <svg width="12" height="12" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 18L12 10L20 2L18 0L10 8L2 0L0 2L8 10L0 18L2 20L10 12L18 20L20 18Z" fill="gray"/>
+                        </svg>
+                    </a>
+                </div>
+                <h2 class=" m-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Dali</h2>
+                <div class="w-5/6 mx-auto">
+                    <!-- slider -->
+                    <div class="slider" id="slider">
+                        <div class="slider__item" >
+                            <img src="./img/img-1.png" alt="tovar" class="w-full">
+                        </div>
+                        <div class="slider__item" >
+                            <img src="./img/img-2.png" alt="tovar" class="w-full">
+                        </div>
+                        <div class="slider__item" >
+                            <img src="./img/img-3.png" alt="tovar" class="w-full">
+                        </div>
+                    </div>
+                    <h3 class=" mb-4 text-xl font-normal tracking-tight text-gray-900 dark:text-white">Описание товара</h3>
+                    <h5 class=" my-4 text-lg font-light  text-gray-900 dark:text-white">Супербасс</h5>
+                    <p class="mb-3 font-light text-gray-900 dark:text-gray-900"><span class="italic">Длина товара:</span> 1.0 см</p>
+                    <p class="mb-3 font-light text-gray-900 dark:text-gray-900"><span class="italic">Длина товара:</span> 1.0 см</p>
+                    <p class="mb-3 font-light text-gray-900 dark:text-gray-900"><span  class="italic">Длина товара:</span> 1.0 см</p>
+                    <div class=" pt-6 grid grid-cols-2 border-t-2 border-gray-400 h-full">
+                        <div class="w-5/6">
+                            <p class="mb-3 text-lg font-light text-gray-500 dark:text-gray-500">В наличии:</p>
+                            <p class="mb-3 text-lg font-light text-gray-500 dark:text-gray-500">10 ед.</p>
+                            <p class="mb-3 text-lg font-light text-gray-500 dark:text-gray-500">Количество:</p>
+                            <p class="p-3 text-lg font-light text-gray-500 dark:text-gray-500 border border-gray-400">1</p>
+                        </div>
+                        <div>
+                            <p class="mb-3 text-lg font-light text-gray-500 dark:text-gray-500">Цена:</p>
+                            <p class="mb-3 text-lg font-light text-gray-500 dark:text-gray-500">200000,0 р</p>
+                            <div class="btn-add px-2 bg-gray-400 rounded-t flex items-center justify-center">
+                                <a href="#" class=" text-lg font-semibold text-center text-gray-900 dark:text-gray-900">Добавить в корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script>
+            // $(document).ready(function() {
+                $('#slider').slick({
+                    infinite: true,
+                    prevArrow: `<div class="slick-own-btn slick-prev">
+                        <svg width="15" height="18" viewBox="0 0 15 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 1L2 13L14 25" stroke="#1b1b1b" stroke-width="4" stroke-linecap="round"/>
+                        </svg>
+                    </div>`,
+                    nextArrow: `<div class="slick-own-btn slick-next">
+                        <svg width="15" height="18" viewBox="0 0 15 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L13 13L1 25" stroke="gray" stroke-width="4" stroke-linecap="round"/>
+                        </svg>
+                    </div>`
+                });
+            // });
+        </script>
+    </body>
+</html>
