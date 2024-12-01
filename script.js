@@ -5,10 +5,9 @@ const burgerClose = burger.querySelector('.burger__button');
 
 // кнопка для запроса с сервера, категория товара
 const links = document.querySelectorAll('.menu__link');
+// spinner
+const spinner = document.querySelector('.spinner');
 
-// картинки и названия выбранных категорий товара
-const imgs = document.querySelectorAll('.img');
-const titles = document.querySelectorAll('.title');
 
 // /////////////// создание карточек ////////////////////////
 const cards = document.querySelector('.cards');
@@ -67,6 +66,7 @@ burgerClose.addEventListener('click', () => {
 // запрос к серверу по клику
 links.forEach((link) => {
     link.addEventListener('click', () => {
+        spinner.classList.remove('hidden');
         fetch('https://api.nomoreparties.co/beatfilm-movies',{
             method: 'GET',
             headers: {'Content-type': 'application/json; charset=UTF-8',}
@@ -101,7 +101,10 @@ links.forEach((link) => {
             burger.classList.remove('burger_open');
             burgerOpen.classList.add('menu__burger_hidden');
         })
-        .catch(err => console.log(err));
+        .catch(err => console.log(err))
+        .finally(() => {
+            spinner.classList.add('hidden');
+         });
 
     });
 })

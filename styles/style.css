@@ -35,7 +35,10 @@
     }
 }
 
-/* .hidden {} */
+.spinner {
+    top: 5rem;
+    left: 20rem;
+}
 /* slider */
 .slider {
     width: 100%;

@@ -56,23 +56,26 @@
                             onclick="toggleDropdown('dropdownMenuRight')">
                             <span  class="text-white text-xl font-semibold">Категории</span>
                     </button>
-                    <div class="hidden origin-top-right  absolute bg-gray-600 p-6 left-0 top-12  animate-fadeIn w-full text-white"
+                    <div class="hidden origin-top-right  absolute bg-gray-600 p-6 left-0  animate-fadeIn w-full text-white"
                         id="dropdownMenuRight">
                         
                         <a href="#" class="menu__link  text-xl block px-4 py-2 text-sm  
-                                            hover:bg-gray-400 text-white">
+                                            hover:bg-gray-500 text-white">
                             Кино
-                            </a>
-                        <a href="#" class="menu__link text-white text-xl block px-4 py-2 text-sm
-                                            text-gray-700 
-                                            hover:bg-gray-100">
-                            Косметика
-                            </a>
+                        </a>
                         <a href="#" class="menu__link text-white text-xl block px-4 py-2 text-sm 
-                                            text-gray-700 
-                                            hover:bg-gray-100">
+                                            hover:bg-gray-500">
+                            Косметика
+                        </a>
+                        <a href="#" class="menu__link text-white text-xl block px-4 py-2 text-sm 
+                                            hover:bg-gray-500">
                             Продукты
-                            </a>
+                        </a>
+                        <div
+                            class="spinner hidden absolute inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-white"
+                            role="status">
+                            <span class="absolute top-0 right-0 !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">...</span>
+                        </div>
                     </div>
                 <button type="button" class="burger__button p-2 border-white border-2 rounded-full justify-self-end">
                     <svg width="12" height="12" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
