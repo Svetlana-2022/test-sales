@@ -30,14 +30,14 @@
     height: calc(( 50% - 4px ) + 0.75rem );
 }
 @media screen and (max-width: 360px) {
-    .cards{
+    .cards, .cards__groups {
         grid-template-columns: 1fr;
     }
 }
 
 .spinner {
     top: 5rem;
-    left: 20rem;
+    left: 10rem;
 }
 /* slider */
 .slider {
