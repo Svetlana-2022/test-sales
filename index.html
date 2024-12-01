@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href=
-"https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
     <title>ООО «ИТ Продажи»</title>
@@ -17,36 +15,14 @@
                 Switch theme
             </button>
             <a href="index.html" class="p-2 text-teal-500">Все товары</a>
-            <div class="cards grid grid-cols-2 my-4  gap-4">
-                <a href="card.html">
-                    <div class="p-2 sm:p-6 bg-gray-200 border border-gray-200 rounded shadow-md dark:bg-gray-800 dark:border-gray-700 h-full">
-                        <img src="./img/img-1.png" alt="tovar" class="w-full img" >
-                        <h5 class="title m-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Dali</h5>
-                        <p class="mb-3 font-normal text-gray-500 dark:text-gray-400 text-center">890000,0 P</p>
-                    </div>
-                </a>
-                <a href="card.html">
-                    <div class=" p-2 sm:p-6 bg-gray-200 border border-gray-200 rounded shadow-md dark:bg-gray-800 dark:border-gray-700 h-full">
-                        <img src="./img/img-2.png" alt="tovar" class=" w-full img">
-                        <h5 class="title m-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Cabasse</h5>
-                        <p class="mb-3 font-normal text-gray-500 dark:text-gray-400 text-center">4000000,0 P</p>
-                    </div>
-                </a>
-                <a href="card.html">
-                    <div class=" p-2 sm:p-6 bg-gray-200 border border-gray-200 rounded shadow-md dark:bg-gray-800 dark:border-gray-700 h-full">
-                        <img src="./img/img-3.png" alt="tovar" class="w-full img">
-                        <h5 class="title m-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Rega naia</h5>
-                        <p class="mb-3 font-normal text-gray-500 dark:text-gray-400 text-center">1800000,0 P</p>
-                    </div>
-                </a>
-                <a href="card.html">
-                    <div class="mb-4 p-2 sm:p-6 bg-gray-200 border border-gray-200 rounded shadow-md dark:bg-gray-800 dark:border-gray-700 h-full">
-                        <img src="./img/img-4.png" alt="tovar" class="w-full img">
-                        <h5 class="title m-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Fiio</h5>
-                        <p class="mb-3 font-normal text-gray-500 dark:text-gray-400 text-center">33000,0 P</p>
-                    </div>
-                </a>
-            </div>
+            <!-- карточки главной страницы -->
+            <ul class="cards grid grid-cols-2 my-4  gap-4 list-none list-inside">
+
+            </ul>
+            <!-- карточки страницы категории -->
+            <ul class="cards__groups hidden grid grid-cols-2 my-4  gap-4 list-none list-inside">
+
+            </ul>
             <div class="menu__burger bg-teal-500 fixed  border-teal-500 border-2 w-20 h-20 md:w-24 md:h-24 grid place-items-center">
                 <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M36 14L8 14V11L36 11V14Z" fill="white"/>
@@ -56,6 +32,20 @@
             </div>
         </div>    
     </section>
+    <!-- Использовала шаблон <template> -->
+
+        <template class="element-template">
+            <li class="card">
+                <a href="card.html">
+                    <div class=" p-2 sm:p-6 bg-gray-200 border border-gray-200 rounded shadow-md dark:bg-gray-800 dark:border-gray-700 h-full">
+                        <img src="./img/img-2.png" alt="tovar" class=" w-full img">
+                        <h5 class="title m-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Cabasse</h5>
+                        <p class="mb-3 font-normal text-gray-500 dark:text-gray-400 text-center">4000000,0 P</p>
+                    </div>
+                </a>
+            </li>
+        </template>
+    <!-- шаблон <template> end-->
 
     <!-- burger -->
     <div class="burger max-w-4xl mx-auto h-full">
@@ -103,6 +93,8 @@
                 </form>
             </div>
         </div>
+    </div>
+        <!-- burger -->
     <script src="./script.js"></script>
 </body>
 </html>
