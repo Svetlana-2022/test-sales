@@ -10,11 +10,11 @@
 <body class="dark-mode  ">
     <section class="main max-w-4xl mx-auto p-6 ">
         <div class="relative h-screen pt-6">
-            <button class="border p-1 absolute top-0 right-0 text-dark-mode-white" 
+            <button class="border p-1 absolute top-0 right-0 text-dark-mode-white hover:text-gray-500 focus:outline-none" 
                     onclick="document.body.classList.toggle('dark-mode')">
                 Switch theme
             </button>
-            <a href="index.html" class="p-2 text-teal-500">Все товары</a>
+            <a href="index.html" class="p-2 text-teal-400 hover:text-teal-600">Все товары</a>
             <!-- карточки главной страницы -->
             <ul class="cards grid grid-cols-2 my-4  gap-4 list-none list-inside">
 
@@ -23,13 +23,13 @@
             <ul class="cards__groups hidden grid grid-cols-2 my-4  gap-4 list-none list-inside">
 
             </ul>
-            <div class="menu__burger bg-teal-500 fixed  border-teal-500 border-2 w-20 h-20 md:w-24 md:h-24 grid place-items-center">
+            <button class="menu__burger bg-teal-500 fixed  border-teal-500 border-2 w-20 h-20 md:w-24 md:h-24 grid place-items-center hover:bg-teal-600 focus:outline-none">
                 <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M36 14L8 14V11L36 11V14Z" fill="white"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M36 24L8 24V21L36 21V24Z" fill="white"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M36 34L8 34V31L36 31V34Z" fill="white"/>
                 </svg>
-            </div>
+            </button>
         </div>    
     </section>
     <!-- Использовала шаблон <template> -->
@@ -52,10 +52,10 @@
         <div class="burger__container w-3/4 h-full">
             <div class="relative bg-teal-500  p-6 ">
                 <div class=" text-white mb-4 flex items-center justify-between gap-4">
-                    <button class=" bg-teal-500  text-white flex justify-center items-center  focus:outline-none"
+                    <button class=" bg-teal-500  text-white flex justify-center items-center px-2 rounded  focus:outline-none hover:text-gray-400"
                             onclick="toggleDropdown('dropdownMenuRight')">
-                            <span  class="text-white text-xl font-semibold mr-2">Категории</span>
-                            <svg class="icon-category -mr-1 w-5 text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                            <span  class="text-inherit text-xl font-semibold mr-2 ">Категории</span>
+                            <svg class="icon-category  -mr-1 w-5 text-inherit" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
                                 <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
                             </svg>
                     </button>
@@ -63,15 +63,15 @@
                         id="dropdownMenuRight">
                         
                         <a href="#" class="menu__link  text-xl block px-4 py-2 text-sm  
-                                            hover:bg-gray-500 text-white">
+                                            hover:text-gray-400 text-white">
                             Кино
                         </a>
                         <a href="#" class="menu__link text-white text-xl block px-4 py-2 text-sm 
-                                            hover:bg-gray-500">
+                                            hover:text-gray-400">
                             Косметика
                         </a>
                         <a href="#" class="menu__link text-white text-xl block px-4 py-2 text-sm 
-                                            hover:bg-gray-500">
+                                            hover:text-gray-400">
                             Продукты
                         </a>
                         <div
@@ -80,7 +80,7 @@
                             <span class="absolute top-0 right-0 !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">...</span>
                         </div>
                     </div>
-                <button type="button" class="burger__button p-2 border-white border-2 rounded-full justify-self-end">
+                <button type="button" class="burger__button p-2 border-white border-2 rounded-full justify-self-end hover:border-gray-400">
                     <svg width="12" height="12" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M20 18L12 10L20 2L18 0L10 8L2 0L0 2L8 10L0 18L2 20L10 12L18 20L20 18Z" fill="white"/>
                     </svg>
@@ -91,7 +91,7 @@
                     <div>
                       <input class="shadow appearance-none border border-gray-600 rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Поиск товаров">
                     </div>
-                    <button class=" p-2 border-white border-2 rounded-full justify-self-end focus:outline-none focus:shadow-outline" type="button">
+                    <button class=" p-2 border-white border-2 rounded-full justify-self-end focus:outline-none focus:shadow-outline hover:border-gray-400" type="button">
                         <svg width="12" height="12" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve">
                             <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23 s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92 c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17 s-17-7.626-17-17S14.61,6,23.984,6z" fill="#000000" style="fill: rgb(255, 255, 255);"></path>
                         </svg>

@@ -29,9 +29,11 @@
 .btn-add {
     height: calc(( 50% - 4px ) + 0.75rem );
 }
+
 .icon-scale {
     transform: scale(-1);
 }
+
 @media screen and (max-width: 360px) {
     .cards, .cards__groups {
         grid-template-columns: 1fr;
@@ -74,10 +76,12 @@
  
 .slick-own-btn:hover {
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    opacity: 0.5;
 }
  
 .slick-own-btn:active {
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    opacity: 0.5;
 }
  
 .slick-prev {
