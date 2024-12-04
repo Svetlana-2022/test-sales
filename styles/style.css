@@ -29,6 +29,9 @@
 .btn-add {
     height: calc(( 50% - 4px ) + 0.75rem );
 }
+.icon-scale {
+    transform: scale(-1);
+}
 @media screen and (max-width: 360px) {
     .cards, .cards__groups {
         grid-template-columns: 1fr;

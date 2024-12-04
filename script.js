@@ -2,6 +2,7 @@
 const burgerOpen = document.querySelector('.menu__burger');
 const burger = document.querySelector('.burger');
 const burgerClose = burger.querySelector('.burger__button');
+const iconCategory = document.querySelector('.icon-category');
 
 // кнопка для запроса с сервера, категория товара
 const links = document.querySelectorAll('.menu__link');
@@ -117,4 +118,10 @@ function toggleDropdown(menuId) {
     const dropdownMenu = document
     .getElementById(menuId);
     dropdownMenu.classList.toggle('hidden');
+    if(!dropdownMenu.classList.contains('hidden')) {
+        iconCategory.classList.add('icon-scale');
+    } else {
+        iconCategory.classList.remove('icon-scale');
+    }
+    
 }
